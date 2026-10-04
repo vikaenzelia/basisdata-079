@@ -1,0 +1,8 @@
+# Mengabaikan berkas konfigurasi lingkungan & kredensial
+*.env
+kredensial*.txt
+
+# Mengabaikan log dan berkas sementara sistem
+*.log
+.DS_Store
+Thumbs.db 
