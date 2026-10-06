@@ -25,7 +25,6 @@ Tangkapan layar hasil berada pada folder Image, verivikasi Server dan Kueri Iden
 Setelah mengaktifkan layanan MySQL pada XAMPP Control Panel, perintah verifikasi di jalankan melalui CLI.
 SELECT VERSION(), CURRENT_USER();
 SELECT @@sql_mode;
-
 Konfigurasi Akun Kerja dan Pembatasan Hak Akses
 Pembuatan basis data kopma_123 dan pembuatan pengguna mhs_123 dengan hak akses terbatas.
 Verifikasi hak akses basis data saat login menggunakan mhs_123:
@@ -33,13 +32,13 @@ SHOW DATABASES;
 Pengujian pengaksesan basis data sistem mysql:
 USE mysql;
 
-4. Titik Analisis
+5. Titik Analisis
 Walaupun tombol di XAMPP berlabel "MySQL", server yang aktif adalah MariaDB 10.4.32. Dokumentasi MySQL digunakan untuk sintaks SQL standar, sedangkan dokumentasi MariaDB wajib dirujuk untuk arsitektur, konfigurasi my.ini, mesin penyimpanan Aria, dan penanganan galat internal.
 Menjalankan mysql -u root tanpa -p setelah kata sandi dikonfigurasi menghasilkan ERROR 1045 (28000). Frasa (using password: NO) menandakan bahwa klien mencoba terhubung tanpa mengoperkan parameter kata sandi.
 Akun mhs_123 dapat mengakses information_schema karena berisi metadata standar sesuai hak akses pengguna. Akses ke mysql ditolak (ERROR 1044) karena memuat kredensial global. Perbedaannya: ERROR 1044 adalah gagal hak akses pada objek/basis data, sedangkan ERROR 1045 adalah gagal otentikasi identitas/sandi.
 Mode auth_type = 'cookie' pada phpMyAdmin lebih aman karena mewajibkan pendaftaran masuk tiap sesi peramban dimulai, berbeda dari mode config yang menyimpan kredensial dalam bentuk teks polos (plain text) di berkas config.inc.php.
 
-5. Hasil Latihan
+7. Hasil Latihan
 Tangkapan layar hasil Galat berada pada folder Image.
 
 (Pembuatan Pengguna Tamu & Uji Hak Akses): Pengguna tamu_123 dibuat dengan izin akses hanya untuk membaca (SELECT) pada basis data kopma_123. Ketika mencoba membuat tabel (CREATE TABLE), sistem menolak dengan pesan ERROR 1142, yang membuktikan bahwa pembatasan hak akses berhasil.
