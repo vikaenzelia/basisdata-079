@@ -1,10 +1,15 @@
 # Laporan Praktikum Basis Data
 
 Nama: Vika Desty Enzelia
+
 NPM: 25430079
+
 Kelas: C
+
 Pertemuan: 1
+
 Dosen Pengampu: Dedi Irawan, S.Kom., M.T.I.
+
 Tanggal: 3 Oktober 2026
 
 Tujuan Praktikum
