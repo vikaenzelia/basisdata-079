@@ -62,6 +62,7 @@ Saya menggunakan bantuan AI untuk memahami buku panduan, mencari referensi dalam
 
 10. Bukti Git
 Tautan Repositori:https://github.com/vikaenzelia/basisdata-079
+
 Hash Commit Pertemuan 1: 7765927
 
 Checklist
