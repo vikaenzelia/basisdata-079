@@ -40,7 +40,6 @@ Mode auth_type = 'cookie' pada phpMyAdmin lebih aman karena mewajibkan pendaftar
 
 5. Hasil Latihan
 Tangkapan layar hasil Galat berada pada folder Image.
-
 (Pembuatan Pengguna Tamu & Uji Hak Akses): Pengguna tamu_123 dibuat dengan izin akses hanya untuk membaca (SELECT) pada basis data kopma_123. Ketika mencoba membuat tabel (CREATE TABLE), sistem menolak dengan pesan ERROR 1142, yang membuktikan bahwa pembatasan hak akses berhasil.
 (Skrip Re-executable): Skrip p01_lingkungan_2301010123.sql diperbaiki dengan menambahkan klausa IF NOT EXISTS agar skrip dapat dijalankan berulang kali tanpa menghasilkan galat duplikasi.
 
