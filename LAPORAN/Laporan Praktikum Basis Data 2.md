@@ -82,7 +82,7 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 * **Titik Analisis 2**
 * **Soal:** Subtotal dan total adalah nilai turunan. Sebutkan satu alasan untuk tidak menyimpannya dan satu alasan yang mungkin membuat total tetap disimpan.
 * **Jawaban:**
-* *Alasan tidak menyimpan (Redundansi & Integritas Data):* Mengikuti prinsip normalisasi basis data untuk menghindari redundansi data dan risiko inkonsistensi. Nilai subtotal ($\text{qty} \times \text{harga\_satuan\_detail}$) dan total (penjumlahan subtotal dikurangi diskon) selalu dapat dihitung secara real-time melalui kueri SQL (`SUM`, perhitungan aritmatika).
+* *Alasan tidak menyimpan (Redundansi & Integritas Data):* Mengikuti prinsip normalisasi basis data untuk menghindari redundansi data dan risiko inkonsistensi. Nilai subtotal dan total (penjumlahan subtotal dikurangi diskon) selalu dapat dihitung secara real-time melalui kueri SQL (`SUM`, perhitungan aritmatika).
 * *Alasan tetap menyimpan (Performa & Audit Trail):* Untuk optimasi performa kueri analitis/pelaporan pada tabel berskala jutaan baris agar server DBMS tidak perlu melakukan re-kalkulasi agregasi secara berulang-ulang, serta memberikan jaminan tingkat imutabilitas *audit trail* keuangan pada nota yang diterbitkan.
 
 
