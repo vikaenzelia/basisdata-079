@@ -9,7 +9,6 @@ Tanggal: 3 Oktober 2026
 
 1. Tujuan Praktikum
 Setelah menyelesaikan modul ini, saya mampu:
-
 a. Mengidentifikasi aktivitas organisasi, aktor, dan proses bisnis dari narasi, wawancara, dan dokumen sumber.
 b. Menurunkan elemen data, entitas kandidat, dan aturan bisnis dari dokumen sumber.
 c. Menyusun matriks proses–data (CRUD) dan kamus data awal yang mencantumkan penanggung jawab data (data steward).
@@ -20,7 +19,6 @@ Perancangan basis data dimulai dari analisis kebutuhan sebelum melangkah ke desa
 Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (data steward), aturan bisnis yang mengikat, dan standar mutu/kualitas yang harus dijaga. Kebutuhan dikelompokkan menjadi kebutuhan data, kebutuhan informasi, aturan bisnis, serta kebutuhan non-fungsional. Pemetaan antara proses bisnis dan kelompok data diuji menggunakan Matriks CRUD (Create, Read, Update, Delete) serta didokumentasikan ke dalam Kamus Data Awal.
 
 3. Hasil Langkah Percobaan (Kasus Studi Kopma - p02_kebutuhan_data_kopma_079.md)
-
 A. Identifikasi Aktor dan Proses Bisnis (Kopma)
 PB-01 (Mendaftarkan Anggota): Kasir mendaftarkan anggota atas permintaan mahasiswa.
 PB-02 (Mencatat Penjualan): Kasir mencatat transaksi saat pembeli membayar.
@@ -59,7 +57,6 @@ D. Matriks CRUD (Kopma)
 | **PB-06** Mengelola data pemasok | | | | | C, U | |
 
  4. Jawaban Titik Analisis
-
 Titik Analisis 1
 Soal: Harga barang sudah tersimpan di data master barang. Mengapa nota (detail penjualan) tetap perlu menyimpan harga saat transaksi? Hubungkan jawaban Anda dengan keluhan ketua koperasi dalam kutipan wawancara.
 Jawaban: Harga barang master bersifat dinamis dan dapat naik/turun sewaktu-waktu sesuai kebijakan. Jika detail transaksi penjualan tidak menyimpan harga_satuan_detail, maka perhitungan total nilai transaksi nota lama di masa lalu akan berubah ikut membengkak mengikuti harga master barang yang baru naik. Hal ini menyebabkan keluhan ketua koperasi yang bingung saat memeriksa nota lama. Dengan menyimpan harga pada saat transaksi di tabel detail penjualan (AB-04), histori nilai transaksi keuangan di masa lalu tetap akurat, konsisten, dan terisolasi dari perubahan harga master di masa depan.
@@ -81,7 +78,6 @@ Nilai Parameter $P$ Titik Analisis: 2
 
 5. Hasil Latihan dan Modifikasi
 Perbaikan 3 Pernyataan Kebutuhan Kabur
-
 1.Pernyataan Kabur 1: Sistem harus dapat mengelola data anggota dengan baik. Pernyataan Spesifik & Dapat Diuji: Sistem harus mencatat pendaftaran anggota baru dengan menyimpan nomor anggota unik (format A-XXXX), NIM unik (10 digit), nama lengkap, program studi, dan nomor HP. Sistem dapat memperbarui data profil anggota serta mengubah status keanggotaan (aktif/non-aktif).
 2.Pernyataan Kabur 2: Stok barang harus selalu akurat dan tidak boleh bermasalah. Pernyataan Spesifik & Dapat Diuji: Sistem harus menolak transaksi penjualan apabila kuantitas (qty) barang yang dibeli melebihi jumlah stok barang yang tersedia (stok_barang). Setiap transaksi penjualan yang berhasil akan mengurangi `stok_barang` secara otomatis, dan transaksi penerimaan barang dari pemasok akan menambah stok_barang.
 3.Pernyataan Kabur 3: "Sistem harus menyediakan laporan yang berguna untuk pimpinan. Pernyataan Spesifik & Dapat Diuji: Sistem harus dapat menghasilkan laporan omzet harian/bulanan (KI-01), daftar 5 barang terlaris per bulan berdasarkan kuantitas penjualan (KI-02), daftar barang yang stoknya kurang dari atau sama dengan batas minimum stok (KI-03), daftar 10 anggota dengan total nominal transaksi belanja terbesar per bulan (KI-04), serta laporan rekapitulasi poin loyalitas anggota aktif (KI-05).
@@ -120,4 +116,3 @@ Checklist
 [x] Kesimpulan Tersusun
 [x] Pernyataan Penggunaan AI Disertakan
 [x] Bukti Tautan Git dan Hash Commit Valid
-
