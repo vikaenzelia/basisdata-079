@@ -1,6 +1,5 @@
 # Laporan Praktikum Basis Data
 
-
 Nama: Vika Desty Enzelia
 NPM: 25430079
 Kelas: C
