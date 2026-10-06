@@ -12,7 +12,6 @@
 
 **Tanggal:** 3 Oktober 2026
 
----
 
 **1. Tujuan Praktikum**
 
@@ -23,15 +22,11 @@ Setelah menyelesaikan modul ini, mahasiswa mampu:
 * Menyusun matriks proses–data (CRUD) dan kamus data awal yang mencantumkan penanggung jawab data (*data steward*).
 * Menulis pernyataan kebutuhan data dan kebutuhan informasi yang spesifik serta dapat diuji.
 
----
-
 **2. Ringkasan Dasar Teori**
 
 Perancangan basis data dimulai dari analisis kebutuhan sebelum melangkah ke desain konseptual, logis, dan fisik. Kesalahan pada tahap analisis merupakan kesalahan paling mahal karena dapat menghilangkan histori data berharga (seperti histori harga jual transaksi atau rekam rekapitulasi nilai KRS/KHS) apabila baru disadari di kemudian hari.
 
 Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data steward*), aturan bisnis yang mengikat, dan standar mutu/kualitas yang harus dijaga. Kebutuhan dikelompokkan menjadi kebutuhan data, kebutuhan informasi, aturan bisnis, serta kebutuhan non-fungsional. Pemetaan antara proses bisnis dan kelompok data diuji menggunakan Matriks CRUD (*Create, Read, Update, Delete*) serta didokumentasikan ke dalam Kamus Data Awal.
-
----
 
 **3. Hasil Langkah Percobaan (Kasus Studi Kopma - `p02_kebutuhan_data_kopma_079.md`)**
 
@@ -57,8 +52,6 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 * **AB-07:** Setiap kelipatan Rp10.000 belanja anggota bernilai 1 poin; 50 poin dapat ditukar potongan Rp5.000.
 * **AB-08:** Pendaftaran pemasok baru harus dicatat sebelum transaksi pembelian dari pemasok tersebut dapat dilakukan.
 
-
-
 **C. Kebutuhan Informasi (Kopma)**
 
 * **KI-01:** Omzet dan jumlah nota per hari dan per bulan.
@@ -78,7 +71,6 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 | **PB-05** Menyusun laporan bulanan | R | R | R | R |  | R |
 | **PB-06** Mengelola data pemasok |  |  |  |  | C, U |  |
 
----
 
 **4. Jawaban Titik Analisis**
 
@@ -94,8 +86,6 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 * *Alasan tetap menyimpan (Performa & Audit Trail):* Untuk optimasi performa kueri analitis/pelaporan pada tabel berskala jutaan baris agar server DBMS tidak perlu melakukan re-kalkulasi agregasi secara berulang-ulang, serta memberikan jaminan tingkat imutabilitas *audit trail* keuangan pada nota yang diterbitkan.
 
 
-
-
 * **Titik Analisis 3**
 * **Soal:** Hitung parameter $P$ berdasarkan NIM Anda ($P = (NIM \bmod 3) + 1$). Tunjukkan langkah perhitungannya dan sebutkan nilai $P$.
 * **Jawaban:**
@@ -109,9 +99,6 @@ $$P = 1 + 1 = 2$$
 
 Nilai Parameter $P$ Titik Analisis: **2**
 
-
-
----
 
 **5. Hasil Latihan dan Modifikasi**
 
@@ -129,9 +116,6 @@ Nilai Parameter $P$ Titik Analisis: **2**
 * **Pernyataan Spesifik & Dapat Diuji:** Sistem harus dapat menghasilkan laporan omzet harian/bulanan (KI-01), daftar 5 barang terlaris per bulan berdasarkan kuantitas penjualan (KI-02), daftar barang yang stoknya kurang dari atau sama dengan batas minimum stok (KI-03), daftar 10 anggota dengan total nominal transaksi belanja terbesar per bulan (KI-04), serta laporan rekapitulasi poin loyalitas anggota aktif (KI-05).
 
 
-
----
-
 **6. Tugas Mandiri: Milestone Proyek 2 (Sistem Informasi Akademik)**
 
 * **Tema Proyek:** Sistem Informasi Akademik
@@ -140,13 +124,11 @@ Nilai Parameter $P$ Titik Analisis: **2**
 * **Parameter Modulo $P$ Proyek:** $(79 \bmod 9) + 1 = \mathbf{8}$
 * **Lokasi Dokumen:** Dokumen kebutuhan data lengkap untuk proyek mandiri ini disimpan dalam berkas `p02_kebutuhan_data_079.md` di repositori GitHub.
 
----
 
 **7. Pembahasan dan Kendala**
 
 Pada praktikum Modul 2 ini, kegiatan berfokus pada analisis kebutuhan data baik pada kasus studi acuan (Kopma) maupun kasus tugas mandiri (Sistem Informasi Akademik). Tantangan utama yang dihadapi adalah memisahkan antara elemen data yang perlu disimpan secara permanen dengan nilai turunan (seperti IPK/IPS dan SKS diambil pada Akademik, atau total belanja pada Kopma), serta merumuskan aturan bisnis yang dapat diuji (*testable requirements*). Kendala tersebut diatasi dengan mengidentifikasi entitas master dan transaksi serta memastikan setiap batasan memiliki penanggung jawab data (*data steward*) yang jelas dalam Kamus Data Awal.
 
----
 
 **8. Kesimpulan**
 
@@ -154,20 +136,17 @@ Pada praktikum Modul 2 ini, kegiatan berfokus pada analisis kebutuhan data baik 
 2. Setiap elemen data yang lahir dari proses bisnis organisasi harus memiliki batasan aturan bisnis yang spesifik dan jelas penanggung jawab pengelolaannya (*data steward*).
 3. Matriks CRUD dan Kamus Data Awal berfungsi sebagai alat validasi yang memastikan seluruh entitas terhubung secara logis dengan proses bisnis sebelum melangkah ke tahap Pemodelan ERD.
 
----
 
 **9. Pernyataan Penggunaan AI**
 
 Saya menggunakan bantuan AI untuk memahami buku panduan, mencari referensi dalam penulisan laporan, serta bertanya apakah langkah yang saya lakukan sudah sesuai dengan buku panduan atau belum.
 
----
 
 **10. Bukti Git**
 
 * **Tautan Repositori:** [https://github.com/vikadesty/basisdata-25430079](https://github.com/vikadesty/basisdata-25430079)
 * **Hash Commit:** `d1f8e3b`
 
----
 
 **Checklist Completeness**
 
