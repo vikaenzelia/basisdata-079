@@ -32,31 +32,30 @@ SHOW DATABASES;
 Pengujian pengaksesan basis data sistem mysql:
 USE mysql;
 
-5. Titik Analisis
-
+4. Titik Analisis
 Walaupun tombol di XAMPP berlabel "MySQL", server yang aktif adalah MariaDB 10.4.32. Dokumentasi MySQL digunakan untuk sintaks SQL standar, sedangkan dokumentasi MariaDB wajib dirujuk untuk arsitektur, konfigurasi my.ini, mesin penyimpanan Aria, dan penanganan galat internal.
 Menjalankan mysql -u root tanpa -p setelah kata sandi dikonfigurasi menghasilkan ERROR 1045 (28000). Frasa (using password: NO) menandakan bahwa klien mencoba terhubung tanpa mengoperkan parameter kata sandi.
 Akun mhs_123 dapat mengakses information_schema karena berisi metadata standar sesuai hak akses pengguna. Akses ke mysql ditolak (ERROR 1044) karena memuat kredensial global. Perbedaannya: ERROR 1044 adalah gagal hak akses pada objek/basis data, sedangkan ERROR 1045 adalah gagal otentikasi identitas/sandi.
 Mode auth_type = 'cookie' pada phpMyAdmin lebih aman karena mewajibkan pendaftaran masuk tiap sesi peramban dimulai, berbeda dari mode config yang menyimpan kredensial dalam bentuk teks polos (plain text) di berkas config.inc.php.
 
-6. Hasil Latihan
+5. Hasil Latihan
 Tangkapan layar hasil Galat berada pada folder Image.
 
 (Pembuatan Pengguna Tamu & Uji Hak Akses): Pengguna tamu_123 dibuat dengan izin akses hanya untuk membaca (SELECT) pada basis data kopma_123. Ketika mencoba membuat tabel (CREATE TABLE), sistem menolak dengan pesan ERROR 1142, yang membuktikan bahwa pembatasan hak akses berhasil.
 (Skrip Re-executable): Skrip p01_lingkungan_2301010123.sql diperbaiki dengan menambahkan klausa IF NOT EXISTS agar skrip dapat dijalankan berulang kali tanpa menghasilkan galat duplikasi.
 
-7. Tugas Mandiri:Milestone Proyek 1
+6. Tugas Mandiri:Milestone Proyek 1
 Pembuatan basis data proyek akademik_akad
 pembuatan akun pengembang dev_079 dengan hak penuh ke basis data projek
 penambahan identitas proyek di dalam berkas README.md dan pembuatan berkas .gitiknore
 
-8. Pembahasan dan Kendala
+7. Pembahasan dan Kendala
 Selama pengerjaan terjadi kendala dan galat, namun setelah memahami buku panduan yang telah di berikan oleh dosen pengampu, serta bertanya dan di arahkan oleh AI maka proses dapat di lakukan dengan baik.
 
-9. Kesimpulan
+8. Kesimpulan
 Lingkungan kerja MariaDB 10.4.32 pada XAMPP dan Git telah berhasil dikonfigurasi dan diverifikasi. Pembedaan antara akun administrator (root) dan akun kerja (mhs_079, dev_079) berhasil mengimplementasikan prinsip privilese minimum untuk menjaga keamanan data. Seluruh riwayat perubahan skrip dan dokumentasi proyek telah terstruktur dan diunggah ke repositori GitHub.
 
-10. Pernyataan Penggunaan AI
+9. Pernyataan Penggunaan AI
 Saya menggunakan bantuan AI untuk memahami buku panduan, mencari referensi dalam penulisan laporan serta bertanya apakah Langkah yang saya lakukan sudah sesuai dengan buku panduan atau belum.
 
 10. Bukti Git
