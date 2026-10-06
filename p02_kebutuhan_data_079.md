@@ -125,12 +125,13 @@ Dokumen sumber utama yang dianalisis adalah **Kartu Rencana Studi (KRS)**:
 
 ## 10. Dokumen Sumber Fiktif (Kartu Rencana Studi)
 
+```text
 ======================================================================
                    KARTU RENCANA STUDI (KRS)
                    TAHUN AKADEMIK 2026/2027
 ======================================================================
 NPM           : 25430079              Semester : Ganjil (3)
-Nama          : Vika Desty Enzelia    Dosen PA : Dedi Irawan, S.Kom., M.T.I.
+Nama          : Vika Desty Enzelia    Dosen PA : Dani Anggoro, M.Kom.
 Program Studi : Ilmu Komputer
 ----------------------------------------------------------------------
 No  Kode MK   Nama Mata Kuliah        SKS   Kelas   Hari & Jam
@@ -144,3 +145,4 @@ TOTAL SKS DIAMBIL : 12 SKS (Maksimal Boleh Diambil: 24 SKS)
 ----------------------------------------------------------------------
 Status Persetujuan : DISETUJUI oleh Dosen PA
 ======================================================================
+```
