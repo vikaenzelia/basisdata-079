@@ -33,6 +33,7 @@ Pengujian pengaksesan basis data sistem mysql:
 USE mysql;
 
 5. Titik Analisis
+
 Walaupun tombol di XAMPP berlabel "MySQL", server yang aktif adalah MariaDB 10.4.32. Dokumentasi MySQL digunakan untuk sintaks SQL standar, sedangkan dokumentasi MariaDB wajib dirujuk untuk arsitektur, konfigurasi my.ini, mesin penyimpanan Aria, dan penanganan galat internal.
 Menjalankan mysql -u root tanpa -p setelah kata sandi dikonfigurasi menghasilkan ERROR 1045 (28000). Frasa (using password: NO) menandakan bahwa klien mencoba terhubung tanpa mengoperkan parameter kata sandi.
 Akun mhs_123 dapat mengakses information_schema karena berisi metadata standar sesuai hak akses pengguna. Akses ke mysql ditolak (ERROR 1044) karena memuat kredensial global. Perbedaannya: ERROR 1044 adalah gagal hak akses pada objek/basis data, sedangkan ERROR 1045 adalah gagal otentikasi identitas/sandi.
@@ -52,10 +53,10 @@ penambahan identitas proyek di dalam berkas README.md dan pembuatan berkas .giti
 8. Pembahasan dan Kendala
 Selama pengerjaan terjadi kendala dan galat, namun setelah memahami buku panduan yang telah di berikan oleh dosen pengampu, serta bertanya dan di arahkan oleh AI maka proses dapat di lakukan dengan baik.
 
-8. Kesimpulan
+9. Kesimpulan
 Lingkungan kerja MariaDB 10.4.32 pada XAMPP dan Git telah berhasil dikonfigurasi dan diverifikasi. Pembedaan antara akun administrator (root) dan akun kerja (mhs_079, dev_079) berhasil mengimplementasikan prinsip privilese minimum untuk menjaga keamanan data. Seluruh riwayat perubahan skrip dan dokumentasi proyek telah terstruktur dan diunggah ke repositori GitHub.
 
-9. Pernyataan Penggunaan AI
+10. Pernyataan Penggunaan AI
 Saya menggunakan bantuan AI untuk memahami buku panduan, mencari referensi dalam penulisan laporan serta bertanya apakah Langkah yang saya lakukan sudah sesuai dengan buku panduan atau belum.
 
 10. Bukti Git
