@@ -12,12 +12,11 @@ Dosen Pengampu: Dedi Irawan, S.Kom., M.T.I.
 
 Tanggal: 3 Oktober 2026
 
-Tujuan Praktikum
+1. Tujuan Praktikum
 Menjalankan dan menghentikan layanan MariaDB melalui XAMPP Control Panel serta memeriksa status dan port server.
 Terhubung ke server MariaDB menggunakan CLI dan phpMyAdmin serta memahami perbedaan operasional keduanya.
 Mengamankan akun root dengan sandi dan mengonfigurasi akun kerja dengan privilese terbatas pada basis data tertentu.
 Membangun basis data pertama dan mengelola perubahan proyek menggunakan Git dan GitHub.
-
 2. Ringkasan Teori
 DBMS bertindak sebagai pengelola terpusat untuk menyimpan, mengamankan, dan memanipulasi data secara konsisten. MariaDB beroperasi dengan arsitektur klien-server pada port default 3306. Klien seperti CLI dan phpMyAdmin mengirim kueri SQL ke proses server (mysqld), yang mengeksekusi instruksi dan mengembalikan hasilnya. CLI menawarkan keunggulan berupa eksekusi skrip yang dapat diulang (reproducible) dan dicatat dalam kendali versi Git, sedangkan phpMyAdmin menyediakan antarmuka berbasis web. Untuk alasan keamanan, sistem menerapkan prinsip hak akses minimum (least privilege) dengan membatasi privilese akun kerja hanya pada basis data yang dikelola.
 
