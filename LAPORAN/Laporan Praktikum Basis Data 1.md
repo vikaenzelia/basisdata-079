@@ -38,18 +38,18 @@ Menjalankan mysql -u root tanpa -p setelah kata sandi dikonfigurasi menghasilkan
 Akun mhs_123 dapat mengakses information_schema karena berisi metadata standar sesuai hak akses pengguna. Akses ke mysql ditolak (ERROR 1044) karena memuat kredensial global. Perbedaannya: ERROR 1044 adalah gagal hak akses pada objek/basis data, sedangkan ERROR 1045 adalah gagal otentikasi identitas/sandi.
 Mode auth_type = 'cookie' pada phpMyAdmin lebih aman karena mewajibkan pendaftaran masuk tiap sesi peramban dimulai, berbeda dari mode config yang menyimpan kredensial dalam bentuk teks polos (plain text) di berkas config.inc.php.
 
-7. Hasil Latihan
+6. Hasil Latihan
 Tangkapan layar hasil Galat berada pada folder Image.
 
 (Pembuatan Pengguna Tamu & Uji Hak Akses): Pengguna tamu_123 dibuat dengan izin akses hanya untuk membaca (SELECT) pada basis data kopma_123. Ketika mencoba membuat tabel (CREATE TABLE), sistem menolak dengan pesan ERROR 1142, yang membuktikan bahwa pembatasan hak akses berhasil.
 (Skrip Re-executable): Skrip p01_lingkungan_2301010123.sql diperbaiki dengan menambahkan klausa IF NOT EXISTS agar skrip dapat dijalankan berulang kali tanpa menghasilkan galat duplikasi.
 
-6. Tugas Mandiri:Milestone Proyek 1
+7. Tugas Mandiri:Milestone Proyek 1
 Pembuatan basis data proyek akademik_akad
 pembuatan akun pengembang dev_079 dengan hak penuh ke basis data projek
 penambahan identitas proyek di dalam berkas README.md dan pembuatan berkas .gitiknore
 
-7. Pembahasan dan Kendala
+8. Pembahasan dan Kendala
 Selama pengerjaan terjadi kendala dan galat, namun setelah memahami buku panduan yang telah di berikan oleh dosen pengampu, serta bertanya dan di arahkan oleh AI maka proses dapat di lakukan dengan baik.
 
 8. Kesimpulan
