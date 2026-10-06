@@ -23,6 +23,7 @@ DBMS bertindak sebagai pengelola terpusat untuk menyimpan, mengamankan, dan mema
 3. Langkah Percobaan
 Tangkapan layar hasil berada pada folder Image, verivikasi Server dan Kueri Identitas.
 Setelah mengaktifkan layanan MySQL pada XAMPP Control Panel, perintah verifikasi di jalankan melalui CLI.
+
 SELECT VERSION(), CURRENT_USER();
 SELECT @@sql_mode;
 
@@ -65,14 +66,24 @@ Hash Commit Pertemuan 1: 7765927
 
 Checklist
 [x] Identitas Laporan Lengkap
+
 [x] Tujuan Praktikum Ditulis Ulang
+
 [x] Ringkasan Dasar Teori Murni Pemahaman Sendiri
+
 [x] Tangkapan Layar / Teks Hasil Percobaan Disertakan
+
 [x] Seluruh Titik Analisis (1-4) Dijawab Berurutan
+
 [x] Latihan E1 dan E2 Diselesaikan
+
 [x] Milestone Proyek 1 Diselesaikan
+
 [x] Pembahasan dan Kendala Dicatat
+
 [x] Kesimpulan Tersusun
+
 [x] Pernyataan Penggunaan AI Disertakan
+
 [x] Bukti Tautan Git dan Hash Commit Valid
-rapihkan laporan saya ini
+
