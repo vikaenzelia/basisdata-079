@@ -28,7 +28,7 @@ Perancangan basis data dimulai dari analisis kebutuhan sebelum melangkah ke desa
 
 Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data steward*), aturan bisnis yang mengikat, dan standar mutu/kualitas yang harus dijaga. Kebutuhan dikelompokkan menjadi kebutuhan data, kebutuhan informasi, aturan bisnis, serta kebutuhan non-fungsional. Pemetaan antara proses bisnis dan kelompok data diuji menggunakan Matriks CRUD (*Create, Read, Update, Delete*) serta didokumentasikan ke dalam Kamus Data Awal.
 
-**3. Hasil Langkah Percobaan (Kasus Studi Kopma - `p02_kebutuhan_data_kopma_079.md`)**
+**3. Hasil Langkah Percobaan (Kasus Studi Kopma - p02_kebutuhan_data_kopma_079.md)**
 
 **A. Identifikasi Aktor dan Proses Bisnis (Kopma)**
 
@@ -76,13 +76,13 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 
 * **Titik Analisis 1**
 * **Soal:** Harga barang sudah tersimpan di data master barang. Mengapa nota (detail penjualan) tetap perlu menyimpan harga saat transaksi? Hubungkan jawaban Anda dengan keluhan ketua koperasi dalam kutipan wawancara.
-* **Jawaban:** Harga barang master bersifat dinamis dan dapat naik/turun sewaktu-waktu sesuai kebijakan. Jika detail transaksi penjualan tidak menyimpan `harga_satuan_detail`, maka perhitungan total nilai transaksi nota lama di masa lalu akan berubah ikut membengkak mengikuti harga master barang yang baru naik. Hal ini menyebabkan keluhan ketua koperasi yang bingung saat memeriksa nota lama. Dengan menyimpan harga pada saat transaksi di tabel detail penjualan (AB-04), histori nilai transaksi keuangan di masa lalu tetap akurat, konsisten, dan terisolasi dari perubahan harga master di masa depan.
+* **Jawaban:** Harga barang master bersifat dinamis dan dapat naik/turun sewaktu-waktu sesuai kebijakan. Jika detail transaksi penjualan tidak menyimpan harga_satuan_detail, maka perhitungan total nilai transaksi nota lama di masa lalu akan berubah ikut membengkak mengikuti harga master barang yang baru naik. Hal ini menyebabkan keluhan ketua koperasi yang bingung saat memeriksa nota lama. Dengan menyimpan harga pada saat transaksi di tabel detail penjualan (AB-04), histori nilai transaksi keuangan di masa lalu tetap akurat, konsisten, dan terisolasi dari perubahan harga master di masa depan.
 
 
 * **Titik Analisis 2**
 * **Soal:** Subtotal dan total adalah nilai turunan. Sebutkan satu alasan untuk tidak menyimpannya dan satu alasan yang mungkin membuat total tetap disimpan.
 * **Jawaban:**
-* *Alasan tidak menyimpan (Redundansi & Integritas Data):* Mengikuti prinsip normalisasi basis data untuk menghindari redundansi data dan risiko inkonsistensi. Nilai subtotal dan total (penjumlahan subtotal dikurangi diskon) selalu dapat dihitung secara real-time melalui kueri SQL (`SUM`, perhitungan aritmatika).
+* *Alasan tidak menyimpan (Redundansi & Integritas Data):* Mengikuti prinsip normalisasi basis data untuk menghindari redundansi data dan risiko inkonsistensi. Nilai subtotal dan total (penjumlahan subtotal dikurangi diskon) selalu dapat dihitung secara real-time melalui kueri SQL (SUM, perhitungan aritmatika).
 * *Alasan tetap menyimpan (Performa & Audit Trail):* Untuk optimasi performa kueri analitis/pelaporan pada tabel berskala jutaan baris agar server DBMS tidak perlu melakukan re-kalkulasi agregasi secara berulang-ulang, serta memberikan jaminan tingkat imutabilitas *audit trail* keuangan pada nota yang diterbitkan.
 
 
@@ -92,11 +92,7 @@ Data diperlakukan sebagai aset organisasi yang memiliki penanggung jawab (*data 
 NIM: 25430079
 Perhitungan:
 $$25430079 \bmod 3 = 1$$
-
-
 $$P = 1 + 1 = 2$$
-
-
 Nilai Parameter $P$ Titik Analisis: **2**
 
 
@@ -109,7 +105,7 @@ Nilai Parameter $P$ Titik Analisis: **2**
 
 
 2. **Pernyataan Kabur 2:** "Stok barang harus selalu akurat dan tidak boleh bermasalah."
-* **Pernyataan Spesifik & Dapat Diuji:** Sistem harus menolak transaksi penjualan apabila kuantitas (`qty`) barang yang dibeli melebihi jumlah stok barang yang tersedia (`stok_barang`). Setiap transaksi penjualan yang berhasil akan mengurangi `stok_barang` secara otomatis, dan transaksi penerimaan barang dari pemasok akan menambah `stok_barang`.
+* **Pernyataan Spesifik & Dapat Diuji:** Sistem harus menolak transaksi penjualan apabila kuantitas (qty) barang yang dibeli melebihi jumlah stok barang yang tersedia (stok_barang). Setiap transaksi penjualan yang berhasil akan mengurangi stok_barang secara otomatis, dan transaksi penerimaan barang dari pemasok akan menambah stok_barang.
 
 
 3. **Pernyataan Kabur 3:** "Sistem harus menyediakan laporan yang berguna untuk pimpinan."
@@ -119,10 +115,10 @@ Nilai Parameter $P$ Titik Analisis: **2**
 **6. Tugas Mandiri: Milestone Proyek 2 (Sistem Informasi Akademik)**
 
 * **Tema Proyek:** Sistem Informasi Akademik
-* **Kode Tema:** `akademik_akad`
+* **Kode Tema:** akademik_akad
 * **Nama Organisasi Fiktif:** Sistem Informasi Akademik
 * **Parameter Modulo $P$ Proyek:** $(79 \bmod 9) + 1 = \mathbf{8}$
-* **Lokasi Dokumen:** Dokumen kebutuhan data lengkap untuk proyek mandiri ini disimpan dalam berkas `p02_kebutuhan_data_079.md` di repositori GitHub.
+* **Lokasi Dokumen:** Dokumen kebutuhan data lengkap untuk proyek mandiri ini disimpan dalam berkas p02_kebutuhan_data_079.md di repositori GitHub.
 
 
 **7. Pembahasan dan Kendala**
@@ -145,7 +141,7 @@ Saya menggunakan bantuan AI untuk memahami buku panduan, mencari referensi dalam
 **10. Bukti Git**
 
 * **Tautan Repositori:** [https://github.com/vikadesty/basisdata-25430079](https://github.com/vikadesty/basisdata-25430079)
-* **Hash Commit:** `d1f8e3b`
+* **Hash Commit:** d1f8e3b
 
 
 **Checklist Completeness**
