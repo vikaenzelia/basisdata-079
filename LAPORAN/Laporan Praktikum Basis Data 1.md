@@ -23,7 +23,6 @@ DBMS bertindak sebagai pengelola terpusat untuk menyimpan, mengamankan, dan mema
 3. Langkah Percobaan
 Tangkapan layar hasil berada pada folder Image, verivikasi Server dan Kueri Identitas.
 Setelah mengaktifkan layanan MySQL pada XAMPP Control Panel, perintah verifikasi di jalankan melalui CLI.
-
 SELECT VERSION(), CURRENT_USER();
 SELECT @@sql_mode;
 
