@@ -6,11 +6,11 @@ NPM: 25430079
 
 Kelas: C
 
-Pertemuan: 10
+Pertemuan: 3
 
 Dosen Pengampu: Dedi Irawan, S.Kom., M.T.I.
 
-Tanggal: 3 Oktober 2026
+Tanggal: 10 Oktober 2026
 
 1. Tujuan Praktikum 
 - Memahami dan mampu menerapkan perancangan Entity Relationship Diagram (ERD) fisik basis data relasional.
