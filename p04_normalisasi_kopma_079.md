@@ -65,22 +65,22 @@ Berdasarkan aturan bisnis (AB-xx) pada dokumen kebutuhan data, diturunkan keterg
   2. **`Pemasok_Telepon`** (`kode_pemasok` [PK, FK], `no_telepon` [PK])
 
 ### B. Contoh Pelanggaran 3NF dan Anomali Ubah (Update Anomaly)
-* **Masalah Pelanggaran 3NF:** 
+- **Masalah Pelanggaran 3NF:** 
   Jika `nama_anggota` disimpan langsung di dalam tabel `Penjualan`, terjadi **ketergantungan transitif** (*transitive dependency*):
-  $$\text{no\_nota} \rightarrow \text{no\_anggota} \rightarrow \text{nama\_anggota}$$
+  `no_nota` $\rightarrow$ `no_anggota` $\rightarrow$ `nama_anggota`
   `nama_anggota` bergantung pada `no_anggota` (bukan kunci utama `no_nota`), sehingga melanggar syarat 3NF.
 
-* **Contoh Data yang Melanggar 3NF:**
+- **Contoh Data yang Melanggar 3NF:**
   | no_nota | tanggal_jam | no_anggota | nama_anggota | total_bayar |
   | :--- | :--- | :--- | :--- | :--- |
   | PJ-2609-0142 | 2026-09-10 08:30 | A-0457 | Vika Desty Enzelia | 25000 |
   | PJ-2609-0155 | 2026-09-12 10:15 | A-0457 | Vika Desty Enzelia | 18000 |
   | PJ-2609-0189 | 2026-09-15 14:00 | A-0457 | Vika Desty Enzelia | 42000 |
 
-* **Anomali Ubah (*Update Anomaly*):**
+- **Anomali Ubah (*Update Anomaly*):**
   Jika anggota dengan `no_anggota = 'A-0457'` merubah penulisan nama profilnya di sistem, kueri harus memperbarui banyak baris transaksi lama secara berulang. Jika ada satu baris yang terlewat, data nama anggota menjadi tidak konsisten (*inconsistent data*).
 
-* **Kueri Ubah (UPDATE) yang Memperlihatkan Anomali:**
+- **Kueri Ubah (UPDATE) yang Memperlihatkan Anomali:**
   ```sql
   -- Kueri ini berisiko menyebabkan inkonsistensi jika ada transaksi yang terlewat
   UPDATE Penjualan 
