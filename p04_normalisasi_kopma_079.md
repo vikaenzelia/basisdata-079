@@ -1,4 +1,4 @@
-# Laporan Normalisasi dan Skema Relasional - Koperasi Mahasiswa Sejahtera
+# Dokumen Normalisasi dan Skema Relasional - Koperasi Mahasiswa Sejahtera
 
 ---
 

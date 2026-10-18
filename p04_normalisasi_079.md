@@ -1,4 +1,4 @@
-# Laporan Normalisasi dan Skema Relasional - Sistem Informasi Akademik
+# Dokumen Normalisasi dan Skema Relasional - Sistem Informasi Akademik
 
 ---
 
