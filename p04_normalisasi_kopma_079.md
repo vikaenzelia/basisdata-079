@@ -36,10 +36,11 @@ Berdasarkan aturan bisnis (AB-xx) pada dokumen kebutuhan data, diturunkan keterg
   1. **Anggota** (`no_anggota` [PK], `nim_anggota`, `nama`, `prodi`, `no_hp`, `status_aktif`, `poin_loyalitas`)
   2. **Barang** (`kode_barang` [PK], `nama_barang`, `kategori`, `harga_jual`, `stok`, `batas_minimum_stok`)
   3. **Petugas** (`kode_petugas` [PK], `nama_petugas`, `peran`)
-  4. **Pemasok** (`kode_pemasok` [PK], `nama_pemasok`, `telepon`, `alamat`)
-  5. **Penjualan** (`no_nota` [PK], `tanggal_jam`, `kode_kasir` [FK], `no_anggota` [FK], `total_bayar`)
-  6. **Detail_Penjualan** (`no_nota` [PK, FK], `kode_barang` [PK, FK], `qty`, `harga_satuan_detail`)
-  7. **Pembelian** (`no_faktur` [PK], `tanggal`, `kode_pemasok` [FK], `kode_barang` [FK], `qty`, `harga_beli`)
+  4. **Pemasok** (`kode_pemasok` [PK], `nama_pemasok`, `alamat`)
+  5. **Pemasok_Telepon** (`kode_pemasok` [PK, FK], `no_telepon` [PK])
+  6. **Penjualan** (`no_nota` [PK], `tanggal_jam`, `kode_kasir` [FK], `no_anggota` [FK], `total_bayar`)
+  7. **Detail_Penjualan** (`no_nota` [PK, FK], `kode_barang` [PK, FK], `qty`, `harga_satuan_detail`)
+  8. **Pembelian** (`no_faktur` [PK], `tanggal`, `kode_pemasok` [FK], `kode_barang` [FK], `qty`, `harga_beli`)
 
 ---
 
@@ -50,4 +51,38 @@ Berdasarkan aturan bisnis (AB-xx) pada dokumen kebutuhan data, diturunkan keterg
 ---
 
 ## 5. Keputusan Nilai Turunan
-* **Subtotal, Diskon Anggota, Total Bayar, dan Kembalian:** Diputuskan untuk **tidak disimpan** secara permanen sebagai kolom fisik di tabel basis data operasional utama (kecuali total akhir untuk rekam jejak nota jika diperlukan). Nilai-nilai ini dihitung secara dinamis (*dynamic calculation/derived*) menggunakan fungsi aritmatika SQL saat transaksi berlangsung atau laporan dicetak. Hal ini sesuai dengan aturan bisnis **AB-04** (harga jual historis disimpan per baris detail untuk mengantisipasi kenaikan harga barang).
+* **Subtotal, Diskon Anggota, Total Bayar, dan Kembalian:** Diputuskan untuk **tidak disimpan** secara permanen sebagai kolom fisik di tabel basis data operasional utama (kecuali total akhir untuk rekam jejak nota jika diperlukan). Nilai-nilai ini dihitung secara dinamis (*dynamic calculation/derived*) menggunakan fungsi aritmatika SQL saat transaksi berlangsung atau laporan dicetak (sesuai AB-04).
+
+---
+
+## 6. Latihan dan Modifikasi
+
+### A. Normalisasi Pemasok dengan Beberapa Nomor Telepon
+* **Masalah:** Atribut `telepon` pada tabel `Pemasok` bersifat *multivalued* (satu pemasok memiliki lebih dari satu nomor telepon), yang melanggar aturan **1NF** (persyaratan atomisitas nilai).
+* **Solusi Normalisasi:** Atribut `telepon` dipisahkan menjadi tabel terpisah bernama `Pemasok_Telepon` yang terhubung kembali ke tabel utama `Pemasok` melalui `kode_pemasok` sebagai *Foreign Key* (FK).
+* **Skema Relasi Baru:**
+  1. **`Pemasok`** (`kode_pemasok` [PK], `nama_pemasok`, `alamat`)
+  2. **`Pemasok_Telepon`** (`kode_pemasok` [PK, FK], `no_telepon` [PK])
+
+### B. Contoh Pelanggaran 3NF dan Anomali Ubah (Update Anomaly)
+* **Masalah Pelanggaran 3NF:** 
+  Jika `nama_anggota` disimpan langsung di dalam tabel `Penjualan`, terjadi **ketergantungan transitif** (*transitive dependency*):
+  $$\text{no\_nota} \rightarrow \text{no\_anggota} \rightarrow \text{nama\_anggota}$$
+  `nama_anggota` bergantung pada `no_anggota` (bukan kunci utama `no_nota`), sehingga melanggar syarat 3NF.
+
+* **Contoh Data yang Melanggar 3NF:**
+  | no_nota | tanggal_jam | no_anggota | nama_anggota | total_bayar |
+  | :--- | :--- | :--- | :--- | :--- |
+  | PJ-2609-0142 | 2026-09-10 08:30 | A-0457 | Vika Desty Enzelia | 25000 |
+  | PJ-2609-0155 | 2026-09-12 10:15 | A-0457 | Vika Desty Enzelia | 18000 |
+  | PJ-2609-0189 | 2026-09-15 14:00 | A-0457 | Vika Desty Enzelia | 42000 |
+
+* **Anomali Ubah (*Update Anomaly*):**
+  Jika anggota dengan `no_anggota = 'A-0457'` merubah penulisan nama profilnya di sistem, kueri harus memperbarui banyak baris transaksi lama secara berulang. Jika ada satu baris yang terlewat, data nama anggota menjadi tidak konsisten (*inconsistent data*).
+
+* **Kueri Ubah (UPDATE) yang Memperlihatkan Anomali:**
+  ```sql
+  -- Kueri ini berisiko menyebabkan inkonsistensi jika ada transaksi yang terlewat
+  UPDATE Penjualan 
+  SET nama_anggota = 'Vika Desty Enzelia' 
+  WHERE no_anggota = 'A-0457';
