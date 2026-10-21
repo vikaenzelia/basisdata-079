@@ -46,7 +46,7 @@ Saya menggunakan bantuan AI untuk membantu dalam penyusunan struktur laporan bak
 
 12.Bukti Git
 Tautan Repositori: https://github.com/vikaenzelia/basisdata-079
-Hash Commit Pertemuan 5: (isi hash commit Git Anda)
+Hash Commit Pertemuan 5: 332511a
 
 Checklist
 
