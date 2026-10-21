@@ -12,12 +12,14 @@ Dosen Pengampu: Dedi Irawan, S.Kom., M.T.I.
 
 Tanggal: 10 Oktober 2026
 
-1. Tujuan Praktikum 
+1. Tujuan Praktikum
+
 - Memahami dan mampu menerapkan perancangan Entity Relationship Diagram (ERD) fisik basis data relasional.
 - Mampu mendefinisikan entitas, atribut, tipe data, Primary Key (PK), Foreign Key (FK), serta constraint (seperti NOT NULL, UNIQUE, ENUM, CHECK, dan AUTO_INCREMENT) menggunakan perangkat pemodelan (Draw.io).
 - Mampu merancang relasi antar tabel secara akurat untuk studi kasus sistem informasi Koperasi Mahasiswa (Kopma).
 
 2. Ringkasan Teori
+
 - ERD Fisik (Physical ERD): Representasi rancangan basis data yang sudah disesuaikan dengan sistem manajemen basis data (DBMS) tertentu (seperti MySQL/MariaDB), lengkap dengan spesifikasi tipe data, panjang karakter, serta batasan (constraint) setiap kolom.
 - Atribut & Tipe Data Utama:
 1.INT, SMALLINT: Untuk data numerik/bilangan bulat (misal: ID, stok, poin).
@@ -28,9 +30,11 @@ Tanggal: 10 Oktober 2026
 -Constraint (Batasan): Aturan integritas data seperti PRIMARY KEY (unik dan pengenal utama), FOREIGN KEY (penghubung antar tabel), UNIQUE (nilai tidak boleh duplikat), NOT NULL (wajib diisi), dan CHECK.
 
 3. Langkah Percobaan
+
 Tangkapan layar rancangan ERD Fisik Sistem Informasi Koperasi Mahasiswa dan Akademik akad berada pada folder image.
 
 4. Titik Analisis
+
 - Mengapa kolom nilai turunan seperti subtotal atau total harga tidak disimpan di dalam tabel? Nilai turunan tidak disimpan secara permanen di database untuk menghindari redundansi data dan inkonsistensi. Nilai tersebut dapat dihitung secara dinamis saat query menggunakan fungsi agregat (misalnya perkalian antara qty dan harga_satuan).
 
 - Apa fungsi dari penggunaan constraint CHECK >= 0 pada kolom harga dan stok barang? Untuk memastikan bahwa data yang dimasukkan ke dalam basis data tidak bernilai negatif, sehingga menjaga validitas logika bisnis stok dan harga barang di Koperasi.
@@ -38,6 +42,7 @@ Tangkapan layar rancangan ERD Fisik Sistem Informasi Koperasi Mahasiswa dan Akad
 - Jelaskan peran tabel perantara seperti detail_penjualan dan detail_pembelian! Tabel perantara digunakan untuk memecah relasi Many-to-Many (Banyak ke Banyak) antara tabel penjualan dengan barang, serta tabel pembelian dengan barang, agar ternormalisasi menjadi relasi One-to-Many.
 
 5. Hasil Latihan
+
 Melakukan pemetaan struktur tabel dari studi kasus Kopma ke dalam bentuk skema relasional, di mana setiap tabel memiliki atribut kunci utama (PK) dan kunci tamu (FK) yang saling terhubung secara konsisten:
 - Tabel petugas: Menyimpan data pegawai/pengurus (id_petugas, kode_petugas, nama_petugas, peran_petugas).
 - Tabel anggota: Menyimpan data anggota koperasi (id_anggota, no_anggota, nim_anggota, nama_anggota, prodi_anggota, no_hp_anggota, status_anggota, poin_loyalitas, tgl_daftar_anggota).
@@ -47,17 +52,21 @@ Melakukan pemetaan struktur tabel dari studi kasus Kopma ke dalam bentuk skema r
 - Tabel pembelian & detail_pembelian: Mencatat transaksi pengadaan barang dari pemasok.6. Tugas Mandiri
 
 6. Tugas Mandiri: Milestone Proyek 3
+
 Menyelesaikan rancangan skema basis data fisik berbasis relasional untuk modul sistem informasi Koperasi Mahasiswa (Kopma) yang mencakup integritas referensial antar entitas kasir, inventaris, anggota, dan pengadaan barang.
 
 7. Pembahasan dan Kendala
+
 - Perancangan ERD fisik menuntut ketelitian tinggi dalam menentukan tipe data dan relasi Foreign Key agar tidak terjadi error saat nanti diimplementasikan kedalam script SQL (DDL).
 - Kendala dalam penyesuaian tipe data numerik dan presisi desimal pada kolom mata uang (DECIMAL(12,2)) serta pengaturan relasi on delete/update antar tabel yang kompleks.
 
 8. Kesimpulan
+
 - ERD fisik berhasil dirancang dengan baik sesuai dengan struktur tabel sistem informasi Koperasi Mahasiswa.
 - Seluruh atribut, tipe data, Primary Key, Foreign Key, dan constraint telah didefinisikan secara tepat untuk mendukung integritas data pada sistem basis data MariaDB/MySQL.
 
 9. Pernyataan Penggunaan AI
+
 Saya menggunakan bantuan AI untuk memahami buku panduan,pengecekan kesesuaian atribut ERD berdasarkan modul praktikum basis data, mencari referensi dalam penulisan laporan serta bertanya apakah Langkah yang saya lakukan sudah sesuai dengan buku panduan atau belum.
 
 10. Bukti Git
