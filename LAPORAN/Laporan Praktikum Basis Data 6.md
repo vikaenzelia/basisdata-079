@@ -51,14 +51,15 @@ Laporan dan praktikum ini disusun dengan bantuan AI sebagai mitra diskusi logis 
 10.Bukti Git
 
 Tautan Repositori: https://github.com/vikaenzelia/basisdata-079
+
 Hash Commit Terakhir: 797e6b5
 
 Checklist
 - [x] Laporan ditulis dengan format Markdown dalam folder laporan/
-- [x] Penamaan file sesuai format p06_laporan_25430079.md
+- [x] Penamaan file sesuai format p06_laporan_079.md
 - [x] Semua screenshot terminal telah disertakan dengan keterangan
 - [x] Jawaban titik analisis diisi lengkap
 - [x] Hasil latihan dan modifikasi (Bagian E) disertakan
-- [x] File skenario uji p06_uji_25430079.md dan p06_uji_kopma_079.md lengkap
+- [x] File skenario uji p06_uji_079.md dan p06_uji_kopma_079.md lengkap
 - [x] Skrip DDL dan data teruji reproducible
 - [x] Seluruh perubahan telah di-commit dan di-push ke GitHub
