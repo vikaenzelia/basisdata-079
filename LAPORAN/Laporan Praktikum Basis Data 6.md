@@ -74,7 +74,7 @@ Seluruh eksekusi perintah di MariaDB, pengujian terminal, pengambilan tangkapan 
 
 ## 10. Bukti Git
 * **Tautan Repositori:** https://github.com/vikaenzelia/basisdata-079
-* **Hash Commit Terakhir: 797e6b5 
+* **Hash Commit Terakhir:** 797e6b5 
 
 ## Checklist
 - [x] Laporan ditulis dengan format Markdown dalam folder `laporan/`
