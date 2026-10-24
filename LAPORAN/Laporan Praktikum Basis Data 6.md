@@ -73,8 +73,8 @@ Laporan dan praktikum ini disusun dengan bantuan AI (Gemini) sebagai mitra disku
 Seluruh eksekusi perintah di MariaDB, pengujian terminal, pengambilan tangkapan layar, dan penyusunan isi akhir dilakukan secara mandiri oleh praktikan.
 
 ## 10. Bukti Git
-* **Tautan Repositori:** `https://github.com/vikadestyenzelia-lang/basisdata-079`
-* **Hash Commit Terakhir:
+* **Tautan Repositori:** https://github.com/vikaenzelia/basisdata-079
+* **Hash Commit Terakhir: 797e6b5 
 
 ## Checklist
 - [x] Laporan ditulis dengan format Markdown dalam folder `laporan/`
