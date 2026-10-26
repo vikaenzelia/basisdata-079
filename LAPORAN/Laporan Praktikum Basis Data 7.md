@@ -52,7 +52,7 @@ Laporan dan praktikum ini disusun dengan bantuan AI sebagai mitra diskusi logis 
 
 Tautan Repositori: https://github.com/vikaenzelia/basisdata-079
 
-Hash Commit Terakhir: a1b2c3d
+Hash Commit Terakhir: 927e0e0
 
 Checklist
 - [x] Laporan ditulis dengan format Markdown dalam folder laporan/
