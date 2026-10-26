@@ -1,4 +1,4 @@
--- Berkas: p01_lingkungan_25430079.sql
+-- Berkas: p01_lingkungan_079.sql
 -- Keterangan: Skrip Inisialisasi Lingkungan Kerja MariaDB & Proyek Mandiri Modul 1
 -- Catatan: Password disamarkan menggunakan penanda untuk keamanan repositori Git.
 
