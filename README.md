@@ -1,37 +1,25 @@
-Repositori Praktikum Basis Data - Semester 3
+# Repositori Praktikum Basis Data - Semester 3
 
-Nama: Vika Desty Enzelia
+**Nama:** Vika Desty Enzelia  
+**NPM:** 25430079  
+**Kelas:** C  
+**Mata Kuliah:** Basis Data  
+**Institusi:** Universitas Muhammadiyah Metro  
 
-NPM: 25430079
+---
 
-Kelas: C
+## Identitas Proyek Mandiri
 
-Mata kuliah: Basis Data
+- **Tema Proyek:** Akademik  
+- **Nama Organisasi Fiktif:** Akademika University (`akad_079`)  
+- **Kode Basis Data:** `akad_25430079`  
 
-Institusi: Universitas Muhammadiyah Metro
+---
 
+## Cara Instalasi Bersih (Master Script)
 
-
-Identitas Proyek Mandiri
-
-Tema Proyek: Akademik
-
-Nama Organisasi Fiktif: Akademika University ( akad\_079 )
-
-Kode Basis Data: akad\_079
-
-
-
-Cara Instalasi Bersih (Master Script)
-
-1\. Buka Terminal Windows (Command Prompt / PowerShell) pada direktori proyek.
-
-2\. Jalankan perintah instalasi master:
-
-
+1. Buka Terminal Windows (Command Prompt / PowerShell) pada direktori proyek.
+2. Jalankan perintah instalasi master:
 
 ```bash
-
-mysql -u root < install\_uts\_079.sql
-
-
+mysql -u root -p < install_uts_079.sql
