@@ -92,6 +92,10 @@ Hash Commit Pertemuan 7: 927e0e0
 
 
 
+Hash Commit Pertemuan 8: 867ae14
+
+
+
 Checklist
 
 
