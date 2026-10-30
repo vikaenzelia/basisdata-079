@@ -1,21 +1,37 @@
-# Repositori Praktikum Basis Data - Semester 3
+Repositori Praktikum Basis Data - Semester 3
 
-**Nama:** Vika Desty Enzelia  
-**NPM:** 25430079  
-**Kelas:** C  
-**Mata kuliah:** Basis Data  
-**Institusi:** Universitas Muhammadiyah Metro  
+Nama: Vika Desty Enzelia
 
----
+NPM: 25430079
 
-## Identitas Proyek Mandiri
+Kelas: C
 
-* **Tema Proyek:** Akademik
-* **Nama Organisasi Fiktif:** Akademika University ( `akad_079` )
-* **Kode Basis Data:** `akad_079`
+Mata kuliah: Basis Data
 
----
+Institusi: Universitas Muhammadiyah Metro
 
-## Lingkup Layanan Organisasi
 
-Akademika University V79 adalah sistem informasi akademik digital yang dikembangkan untuk mengelola data perkuliahan secara terintegrasi. Lingkup layanan sistem basis data mencakup pengelolaan data mahasiswa, pencatatan data mata kuliah, penjadwalan kelas, pengelolaan Kartu Rencana Studi (*KRS*), hingga pencatatan dan rekapitulasi nilai mahasiswa untuk memastikan transparansi dan keakuratan administrasi akademik.
+
+Identitas Proyek Mandiri
+
+Tema Proyek: Akademik
+
+Nama Organisasi Fiktif: Akademika University ( akad\_079 )
+
+Kode Basis Data: akad\_079
+
+
+
+Cara Instalasi Bersih (Master Script)
+
+1\. Buka Terminal Windows (Command Prompt / PowerShell) pada direktori proyek.
+
+2\. Jalankan perintah instalasi master:
+
+
+
+```bash
+
+mysql -u root < install\_uts\_079.sql
+
+
