@@ -71,21 +71,47 @@ Laporan dan praktikum ini disusun dengan bantuan AI sebagai mitra diskusi logis 
 Tautan Repositori: https://github.com/vikaenzelia/basisdata-079
 
 Hash Commit Pertemuan 1: 7765927
+
+
 Hash Commit Pertemuan 2: d1f8e3b
+
+
 Hash Commit Pertemuan 3: fffee56
+
+
 Hash Commit Pertemuan 4: 1c661ca
+
+
 Hash Commit Pertemuan 5: 332511a
+
+
 Hash Commit Pertemuan 6: 797e6b5
+
+
 Hash Commit Pertemuan 7: 927e0e0
 
 
 
 Checklist
+
+
 \[x] Laporan ditulis dengan format Markdown dalam folder laporan/
+
+
 \[x] Penamaan file sesuai format p08\_laporan\_25430079.md
+
+
 \[x] Semua screenshot terminal telah disertakan dengan keterangan
+
+
 \[x] Jawaban titik analisis diisi lengkap
+
+
 \[x] Hasil latihan dan verifikasi instalasi bersih disertakan
+
+
 \[x] Rekapitulasi milestone proyek 1-7 lengkap
+
+
 \[x] Seluruh perubahan telah di-commit dan di-push ke GitHub
 
