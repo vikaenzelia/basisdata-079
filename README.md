@@ -4,22 +4,27 @@
 **NPM:** 25430079  
 **Kelas:** C  
 **Mata Kuliah:** Basis Data  
-**Institusi:** Universitas Muhammadiyah Metro  
+**Institusi:** Universitas Muhammadiyah Metro
 
 ---
 
 ## Identitas Proyek Mandiri
 
-- **Tema Proyek:** Akademik  
-- **Nama Organisasi Fiktif:** Akademika University (`akad_079`)  
-- **Kode Basis Data:** `akad_25430079`  
+- **Tema Proyek:** Akademik
+- **Nama Organisasi Fiktif:** Akademika University (`akad_079`)
+- **Kode Tema:** `akad`
+- **Kode Basis Data:** `akad_079`
+
+**Lingkup Layanan Organisasi:**
+
+Akademika University merupakan organisasi pendidikan fiktif yang bergerak dalam bidang pelayanan akademik. Organisasi ini berfokus pada pengelolaan data mahasiswa, mata kuliah, jadwal perkuliahan, Kartu Rencana Studi (KRS), dan nilai mahasiswa. Sistem basis data digunakan untuk membantu proses administrasi akademik agar pengelolaan informasi lebih terstruktur, akurat, dan efisien.
 
 ---
 
-## Cara Instalasi Bersih (Master Script)
+## Struktur Repository
 
-1. Buka Terminal Windows (Command Prompt / PowerShell) pada direktori proyek.
-2. Jalankan perintah instalasi master:
+- `README.md` : Berisi identitas mahasiswa dan identitas proyek.
+- `p01_lingkungan_25430079.sql` : Berisi perintah SQL praktikum pertemuan pertama.
+- `.gitignore` : Mengatur file yang tidak disertakan dalam repository, khususnya file kredensial.
 
-```bash
-mysql -u root -p < install_uts_079.sql
+---
