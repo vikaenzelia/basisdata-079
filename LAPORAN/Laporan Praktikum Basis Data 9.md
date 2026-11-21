@@ -59,7 +59,8 @@ Laporan dan praktikum ini disusun dengan bantuan AI sebagai mitra diskusi dalam 
 10.Bukti Git
 
 Tautan Repositori: https://github.com/vikaenzelia/basisdata-079
-git push:
+
+git push: 4be5948
 
 Checklist
 - [x] Laporan ditulis dengan format Markdown dalam folder laporan
