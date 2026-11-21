@@ -15,16 +15,10 @@
 - **Kode Tema:** `akad`
 - **Kode Basis Data:** `akad_079`
 
+---
+
 **Lingkup Layanan Organisasi:**
 
 Akademika University merupakan organisasi pendidikan fiktif yang bergerak dalam bidang pelayanan akademik. Organisasi ini berfokus pada pengelolaan data mahasiswa, mata kuliah, jadwal perkuliahan, Kartu Rencana Studi (KRS), dan nilai mahasiswa. Sistem basis data digunakan untuk membantu proses administrasi akademik agar pengelolaan informasi lebih terstruktur, akurat, dan efisien.
-
----
-
-## Struktur Repository
-
-- `README.md` : Berisi identitas mahasiswa dan identitas proyek.
-- `p01_lingkungan_25430079.sql` : Berisi perintah SQL praktikum pertemuan pertama.
-- `.gitignore` : Mengatur file yang tidak disertakan dalam repository, khususnya file kredensial.
 
 ---
